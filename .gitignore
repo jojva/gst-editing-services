@@ -67,3 +67,10 @@ log
 *LOCAL*
 *BASE*
 *anjuta*
+
+tests/check/integration
+*.mov
+*.mkv
+*.ogg
+*.ogv
+*.webm
