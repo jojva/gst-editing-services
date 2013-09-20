@@ -333,9 +333,9 @@ _add_keyframes (GESTimeline * timeline)
             gst_timed_value_control_source_set (GST_TIMED_VALUE_CONTROL_SOURCE
                 (source), 0 * GST_SECOND, 0.);
             gst_timed_value_control_source_set (GST_TIMED_VALUE_CONTROL_SOURCE
-                (source), 5 * GST_SECOND, 0.);
+                (source), 0.5 * GST_SECOND, 0.);
             gst_timed_value_control_source_set (GST_TIMED_VALUE_CONTROL_SOURCE
-                (source), 10 * GST_SECOND, 1.);
+                (source), 1 * GST_SECOND, 1.);
           }
         }
         break;
@@ -388,11 +388,11 @@ _check_keyframes (GESTimeline * timeline)
             timed_values = timed_values->next;
             value = timed_values->data;
             fail_unless (value->value == 0.);
-            fail_unless (value->timestamp == 5 * GST_SECOND);
+            fail_unless (value->timestamp == 0.5 * GST_SECOND);
             timed_values = timed_values->next;
             value = timed_values->data;
             fail_unless (value->value == 1.);
-            fail_unless (value->timestamp == 10 * GST_SECOND);
+            fail_unless (value->timestamp == 1 * GST_SECOND);
           }
         }
         break;
